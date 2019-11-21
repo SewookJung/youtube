@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Cloning youtube with Vanilla and NodeJS",
   "main": "index.js",
-  "author": "sewookjung",
   "dependencies": {
     "express": "^4.17.1"
   }
