@@ -1,14 +1,13 @@
-import { videos } from "../DB/videos";
 import routes from "../routers/routes";
 
 export const home = (req, res) => {
-  res.render("home", { pageTitle: "home", videos });
+  res.render("home", { pageTitle: "home" });
 };
 export const search = (req, res) => {
   const {
     query: { term: searchingBy }
   } = req; //Object Destructuring
-  res.render("search", { pageTitle: "search", searchingBy, videos });
+  res.render("search", { pageTitle: "search", searchingBy });
 };
 
 export const getUpload = (req, res) =>
