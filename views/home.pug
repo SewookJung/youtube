@@ -3,3 +3,10 @@ include mixin/videoBlock
 
 block content
     .videos
+        each video in videos
+            +videoBlock({
+                videoFile: video.fileUrl,
+                title: video.title,
+                views: video.views,
+                id: video.id
+            })
