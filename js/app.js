@@ -12,8 +12,9 @@ import routes from "../routers/routes";
 const app = express();
 
 //Middleware
-app.set("view engine", "pug"); // Setting view engine
 app.use(helmet()); // For security
+app.set("view engine", "pug"); // Setting view engine
+app.use("/upload", express.static("upload"));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
