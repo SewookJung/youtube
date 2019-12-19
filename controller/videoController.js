@@ -48,7 +48,8 @@ export const videoDetail = async (req, res) => {
     params: { id }
   } = req;
   const video = await Video.findById(id);
-  res.render("videoDetail", { pageTitle: "videoDetail", video });
+  console.log(video);
+  res.render("videoDetail", { pageTitle: video.title, video });
 };
 
 export const getEditVideo = async (req, res) => {
@@ -80,6 +81,7 @@ export const deleteVideo = async (req, res) => {
   const {
     params: { id }
   } = req;
+  console.log(id);
   try {
     await Video.findOneAndRemove(id);
     res.redirect(routes.home);
